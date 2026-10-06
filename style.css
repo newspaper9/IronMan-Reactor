@@ -1,0 +1,27 @@
+body {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 100vh;
+}
+
+.round {
+  position: absolute;
+  width: var(--round-size);
+  height: var(--round-size);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  filter: drop-shadow(0 0 10px #03add0);
+  transform: translate(-50%, -50%);
+  animation: round var(--round-period) linear infinite;
+  box-shadow: 0 0 20px #03add0;
+}
+@keyframes round {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
